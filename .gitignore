@@ -1,0 +1,7 @@
+.env
+
+venv
+
+arquivos/
+
+__pycache__
