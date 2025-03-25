@@ -21,31 +21,31 @@ O ChatPDF é uma aplicação desenvolvida em Python com Streamlit que permite ca
 ### Passos para Instalação
 
 1. Clone o repositório:
-   ```bash
+   ```python
    git clone https://github.com/LoboProgrammingg/Langchain-Site-Youtube-PDF-CSV-TXT.git
    cd Langchain-Site-Youtube-PDF-CSV-TXT
    ```
 
 2. Crie um ambiente virtual e ative-o:
-   ```bash
+   ```python
    python -m venv venv
    source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
    ```
 
 3. Instale as dependências:
-   ```bash
+   ```python
    pip install -r requirements.txt
    ```
 
 4. (Opcional) Instale as dependências de desenvolvimento:
-   ```bash
+   ```python
    pip install -r requirements-dev.txt
    ```
 
 ## Uso
 
 1. Execute a aplicação:
-   ```bash
+   ```python
    streamlit run home.py
    ```
 
@@ -79,7 +79,7 @@ Este arquivo contém funções auxiliares para carregar conteúdo de diferentes 
 
 Lista de dependências necessárias para rodar a aplicação:
 
-```plaintext
+```python
 streamlit==1.38.0
 langchain==0.3.0
 langchain-community==0.3.0
@@ -97,7 +97,7 @@ youtube_transcript_api==0.6.2
 
 Lista de dependências para desenvolvimento:
 
-```plaintext
+```python
 flake8==7.1.2
 ```
 
