@@ -1,110 +1,117 @@
-# ChatPDF
-![Image](https://github.com/user-attachments/assets/a04c586a-a058-4976-a174-31e9f5484ace)
+# 🤖 ChatPDF: Interaja com Documentos Usando IA
 
-## Descrição do Projeto
+<img src="https://github.com/user-attachments/assets/a04c586a-a058-4976-a174-31e9f5484ace" alt="ChatPDF" style="width: 80%; max-width: 600px; display: block; margin: 0 auto;">
 
-O ChatPDF é uma aplicação desenvolvida em Python com Streamlit que permite carregar diferentes tipos de documentos (como PDFs, CSVs, sites, vídeos do YouTube e arquivos de texto) e interagir com assistentes de IA de diferentes provedores (Groq e OpenAI). O projeto utiliza a biblioteca `langchain` para orquestrar a interação entre o usuário e os modelos de linguagem.
+**ChatPDF** é uma aplicação poderosa desenvolvida em **Python** com **Streamlit**, que permite carregar e interagir com diferentes tipos de documentos (PDFs, CSVs, sites, vídeos do YouTube e arquivos de texto) utilizando modelos de linguagem avançados como **Groq** e **OpenAI**.
 
-## Funcionalidades
+---
 
-- **Carregamento de Arquivos:** Suporte para carregar documentos de sites, vídeos do YouTube, PDFs, arquivos CSV e arquivos de texto.
-- **Assistentes de IA:** Integração com modelos de linguagem de diferentes provedores (Groq e OpenAI) para responder perguntas baseadas no conteúdo dos documentos carregados.
-- **Memória de Conversa:** Utiliza `ConversationBufferMemory` para manter o histórico de conversação e melhorar a interação com o usuário.
-- **Interface Simples:** Interface amigável e interativa desenvolvida com Streamlit.
+## 📖 Índice
+- [🌟 Principais Funcionalidades](#principais-funcionalidades)
+- [📦 Instalação](#instalação)
+- [🚀 Como Usar](#como-usar)
+- [🗂️ Estrutura do Projeto](#estrutura-do-projeto)
+- [🧪 Testes](#testes)
 
-## Instalação
+---
+
+## 🌟 Principais Funcionalidades
+
+- **📂 Suporte a Diversos Tipos de Arquivos**:
+  - PDFs
+  - Arquivos CSV
+  - Arquivos de texto
+  - Conteúdo de sites
+  - Transcrições de vídeos no YouTube
+- **🧠 Assistentes de IA**:
+  - Integração com modelos de linguagem baseados em Groq e OpenAI.
+  - Respostas contextualizadas baseadas no conteúdo carregado.
+- **💬 Memória de Conversa**:
+  - Utiliza `ConversationBufferMemory` para manter o histórico de interações e oferecer uma experiência mais fluida.
+- **💻 Interface Simples e Intuitiva**:
+  - Desenvolvida com Streamlit, proporcionando facilidade de uso.
+
+---
+
+## 📦 Instalação
 
 ### Pré-requisitos
-
-- Python 3.7 ou superior
+- **Python 3.7 ou superior** instalado no sistema.
 
 ### Passos para Instalação
 
-1. Clone o repositório:
-   ```python
+1. **Clone o repositório**:
+   ```bash
    git clone https://github.com/LoboProgrammingg/Langchain-Site-Youtube-PDF-CSV-TXT.git
    cd Langchain-Site-Youtube-PDF-CSV-TXT
    ```
 
-2. Crie um ambiente virtual e ative-o:
-   ```python
+2. **Crie um ambiente virtual e ative-o**:
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
    ```
 
-3. Instale as dependências:
-   ```python
+3. **Instale as dependências**:
+   ```bash
    pip install -r requirements.txt
    ```
 
-4. (Opcional) Instale as dependências de desenvolvimento:
-   ```python
+4. **(Opcional) Dependências de Desenvolvimento**:
+   Caso precise, instale as dependências para desenvolvimento:
+   ```bash
    pip install -r requirements-dev.txt
    ```
 
-## Uso
+---
 
-1. Execute a aplicação:
-   ```python
+## 🚀 Como Usar
+
+1. **Execute a aplicação**:
+   ```bash
    streamlit run home.py
    ```
 
-2. Na interface do Streamlit, você pode:
+2. **Na interface do Streamlit, você pode**:
    - Carregar diferentes tipos de documentos.
-   - Selecionar o provedor e o modelo de linguagem desejado.
-   - Interagir com o assistente de IA para obter respostas baseadas no conteúdo dos documentos carregados.
+   - Escolher o modelo de linguagem desejado (Groq ou OpenAI).
+   - Interagir com o assistente de IA para obter respostas baseadas no conteúdo carregado.
 
-## Estrutura do Código
+---
 
-### home.py
+## 🗂️ Estrutura do Projeto
 
-Este arquivo contém a lógica principal da aplicação, incluindo:
-
-- Carregamento de arquivos de diferentes tipos.
-- Configuração e inicialização dos modelos de linguagem.
-- Interface do usuário utilizando Streamlit.
-- Funções para gerenciar a memória de conversação e exibir mensagens no chat.
-
-### loaders.py
-
-Este arquivo contém funções auxiliares para carregar conteúdo de diferentes tipos de documentos:
-
-- **carrega_site:** Carrega o conteúdo de uma URL.
-- **carrega_youtube:** Carrega o conteúdo de um vídeo do YouTube.
-- **carrega_csv:** Carrega o conteúdo de um arquivo CSV.
-- **carrega_pdf:** Carrega o conteúdo de um arquivo PDF.
-- **carrega_txt:** Carrega o conteúdo de um arquivo de texto.
-
-### requirements.txt
-
-Lista de dependências necessárias para rodar a aplicação:
-
-```python
-streamlit==1.38.0
-langchain==0.3.0
-langchain-community==0.3.0
-langchain-groq==0.2.0
-langchain-openai==0.2.0
-python-dotenv==1.0.1
-beautifulsoup4==4.12.3
-pypdf==5.0.0
-unstructured==0.15.13
-fake_useragent==1.5.1
-youtube_transcript_api==0.6.2
+```plaintext
+Langchain-Site-Youtube-PDF-CSV-TXT/
+├── home.py               # Lógica principal da aplicação.
+├── loaders.py            # Funções para carregar conteúdo de diferentes tipos de documentos.
+├── requirements.txt      # Dependências necessárias para rodar o projeto.
+├── requirements-dev.txt  # Dependências para desenvolvimento.
+└── README.md             # Documentação do projeto.
 ```
 
-### requirements-dev.txt
+### Arquivo `home.py`
+- Contém a lógica principal da aplicação:
+  - Configuração do Streamlit.
+  - Carregamento de arquivos.
+  - Inicialização de modelos de linguagem.
+  - Exibição da interface do usuário.
 
-Lista de dependências para desenvolvimento:
+### Arquivo `loaders.py`
+- Funções para carregar conteúdo de diferentes fontes:
+  - **carrega_site**: Carrega o conteúdo de uma URL.
+  - **carrega_youtube**: Carrega a transcrição de vídeos do YouTube.
+  - **carrega_csv**: Lê dados de arquivos CSV.
+  - **carrega_pdf**: Extrai texto de arquivos PDF.
+  - **carrega_txt**: Lê dados de arquivos de texto simples.
 
-```python
-flake8==7.1.2
+---
+
+## 🧪 Testes
+
+Execute testes automatizados para validar o funcionamento do projeto:
+
+```bash
+pytest tests/
 ```
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
-
-## Licença
-
-- Matheus Lobo Camara
